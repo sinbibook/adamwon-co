@@ -274,10 +274,13 @@ var HeaderFooterMapper = {
 
     var businessInfo = data.property.businessInfo || {};
 
-    // 1. 전화번호 (property.contactPhone)
+    // 1. 전화번호 — 푸터 공통 임시 고정
     var phoneEl = document.querySelector('[data-phone]');
-    if (phoneEl && data.property.contactPhone) {
-      phoneEl.textContent = data.property.contactPhone;
+    if (phoneEl) {
+      // if (data.property.contactPhone) {
+      //   phoneEl.textContent = data.property.contactPhone;
+      // }
+      phoneEl.textContent = '070-4630-6492';
     }
 
     // 2. 주소
